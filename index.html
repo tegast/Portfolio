@@ -11,51 +11,19 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #FFF8F9; /* Very light, soft pink background */
+            background-color: #FFF8F9;
+            /* New background with bunny pattern */
+            background-image: 
+                linear-gradient(rgba(255, 248, 249, 0.85), rgba(255, 248, 249, 0.85)),
+                url('background.png');
+            background-repeat: repeat;
+            background-size: auto, 200px;
             overflow-x: hidden;
-            color: #5C5355; /* Dark, soft text color */
-        }
-        /* Background floating shapes */
-        .background-blur {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-        .blur-shape {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(140px);
-            opacity: 0.5;
-        }
-        .shape1 {
-            width: 500px;
-            height: 500px;
-            background: rgba(255, 182, 193, 0.4); /* Light Pink */
-            top: -150px;
-            left: -150px;
-            animation: float 25s infinite alternate;
-        }
-        .shape2 {
-            width: 400px;
-            height: 400px;
-            background: rgba(230, 230, 250, 0.6); /* Lavender */
-            bottom: -200px;
-            right: -100px;
-            animation: float 30s infinite alternate-reverse;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px) translateX(0px) rotate(0deg); }
-            50% { transform: translateY(-40px) translateX(30px) rotate(180deg); }
-            100% { transform: translateY(0px) translateX(0px) rotate(360deg); }
+            color: #5C5355;
         }
 
         .light-card {
-            background: rgba(255, 237, 240, 0.6); /* Changed from white to pinkish */
+            background: rgba(255, 255, 255, 0.8); /* Increased opacity for better readability */
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-radius: 1.5rem;
@@ -96,18 +64,14 @@
     </style>
 </head>
 <body class="min-h-screen p-4 sm:p-8">
-    <div class="background-blur">
-        <div class="blur-shape shape1"></div>
-        <div class="blur-shape shape2"></div>
-    </div>
 
     <main class="max-w-5xl mx-auto">
         <!-- Header Section -->
         <header class="flex justify-center text-center sm:text-left mb-16">
             <div class="flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
-                <!-- LOGO HERE: Replace this div with your <img> tag -->
-                <div class="w-24 h-24 sm:w-32 sm:h-32 bg-white/50 rounded-full flex items-center justify-center border-2 border-white/80 flex-shrink-0 shadow-lg">
-                    <span class="text-pink-400/50 font-bold">Logo</span>
+                <!-- LOGO HERE: Replace the src of this <img> tag with your own logo URL -->
+                <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full flex-shrink-0 shadow-lg overflow-hidden border-2 border-white/80">
+                    <img src="logo.png" alt="Logo Placeholder" class="w-full h-full object-cover">
                 </div>
                 <div>
                     <h1 class="font-black text-5xl md:text-7xl text-gradient tracking-tight">TEGAST /DEV</h1>
@@ -148,16 +112,7 @@
 
             <!-- Right Column: Professional Portfolio -->
             <section class="lg:col-span-2 space-y-8">
-                 <!-- Featured Project -->
-                <div class="light-card p-8">
-                    <h2 class="font-black text-3xl text-gradient mb-4 tracking-tight">Featured Project</h2>
-                    <div class="text-center">
-                        <h3 class="font-bold text-2xl text-pink-600 mb-2">🍓 Strawberry Bunny</h3>
-                        <p class="text-gray-600 mb-6 text-lg">An adorable and challenging 8-bit endless runner game. Jump, duck, and survive through four dynamic worlds!</p>
-                        <a href="https://tegast.github.io/StrawberryBunny/" target="_blank" class="inline-block px-8 py-3 rounded-full font-bold text-white uppercase tracking-wider bg-pink-500 hover:bg-pink-600 shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition-all transform hover:scale-105">Play Now!</a>
-                    </div>
-                </div>
-
+                
                 <!-- Profile Section -->
                 <div class="light-card p-8">
                     <h2 class="font-black text-3xl text-gradient mb-4 tracking-tight">Profile</h2>
@@ -207,6 +162,16 @@
                     </div>
                 </div>
 
+                <!-- Featured Project -->
+                <div class="light-card p-8">
+                    <h2 class="font-black text-3xl text-gradient mb-4 tracking-tight">Featured Project</h2>
+                    <div class="text-center">
+                        <h3 class="font-bold text-2xl text-pink-600 mb-2">🍓 Strawberry Bunny</h3>
+                        <p class="text-gray-600 mb-6 text-lg">An adorable and challenging 8-bit endless runner game. Jump, duck, and survive through four dynamic worlds!</p>
+                        <a href="https://tegast.github.io/StrawberryBunny/" target="_blank" class="inline-block px-8 py-3 rounded-full font-bold text-white uppercase tracking-wider bg-pink-500 hover:bg-pink-600 shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition-all transform hover:scale-105">Play Now!</a>
+                    </div>
+                </div>
+
                 <!-- Reach Me Section -->
                 <div class="light-card p-8 text-center">
                     <h2 class="font-black text-3xl text-gradient mb-4 tracking-tight">Reach Me</h2>
@@ -239,5 +204,3 @@
 
 </body>
 </html>
-
-
